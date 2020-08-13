@@ -1,17 +1,36 @@
-import React from 'react';
-import { useMediaQuery } from 'react-responsive';
+import MediaQuery, {
+  useMediaQuery
+} from 'react-responsive';
 
 export const useResponsive = () => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-device-width: 1224px)',
-  });
-  const isBigScreen = useMediaQuery({ query: '(min-device-width: 1024px)' });
-  const isTablet = useMediaQuery({ query: '(max-width: 1024px)' });
-  const isPhone = useMediaQuery({ query: '(max-width: 500px)' });
+
+  const isBigScreen = useMediaQuery({
+    minWidth: 1400,
+  })
+
+  const isDesktop = useMediaQuery({
+    minWidth: 801,
+    maxWidth: 1399
+  })
+
+  const isTablet = useMediaQuery({
+    minWidth: 501,
+    maxWidth: 800,
+  })
+  const isPhone = useMediaQuery({
+    maxWidth: 500,
+  })
+
+  const isTabletOrPhone = useMediaQuery({
+    maxWidth: 800,
+  })
+
 
   return {
     isBigScreen: isBigScreen,
     isTablet: isTablet,
     isPhone: isPhone,
+    isDesktop: isDesktop,
+    isTabletOrPhone: isTabletOrPhone
   };
 };

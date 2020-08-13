@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-// import { fadeIn } from '../globalStyles/animation';
+import { useResponsive } from '../hooks/useResponsive';
 
 const Card = ({ title, image, width, height, noClick, color, subtitle }) => {
+  const { isTabletOrPhone } = useResponsive();
+
   const hover = (noClick) => {
     if (!noClick) {
       return `
@@ -44,7 +46,7 @@ const Card = ({ title, image, width, height, noClick, color, subtitle }) => {
 
   const Container = styled.div`
     box-sizing: border-box;
-    width: ${width ? width : '27%'};
+    width: ${isTabletOrPhone ? '100%' : width ? width : '27%'};
     position: relative;
     background: ${image ? `url(${image})` : BgColor(color)};
     background-size: cover;

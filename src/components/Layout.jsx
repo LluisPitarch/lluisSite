@@ -6,9 +6,15 @@ import styled from 'styled-components';
 import { useResponsive } from '../hooks/useResponsive';
 
 const Layout = ({ children }) => {
-  const { isBigScreen, isPhone, isTablet } = useResponsive();
+  const { isBigScreen, isDesktop, isTablet } = useResponsive();
 
-  const margin = isBigScreen ? '15%' : isTablet ? '10%' : '4%';
+  const margin = isBigScreen
+    ? '18%'
+    : isDesktop
+    ? '12%'
+    : isTablet
+    ? '10%'
+    : '4%';
 
   const Container = styled.div`
     position: relative;

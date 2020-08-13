@@ -3,6 +3,7 @@ import Logo from './Logo';
 
 import styled from 'styled-components';
 import { Link } from '@reach/router';
+import Menu from './Menu';
 
 const Nav = styled.nav`
   margin-top: 20px;
@@ -39,10 +40,7 @@ const NavBar = () => {
     <Nav>
       <LogoStyled />
       <Anchors>
-        <LinkTo to="/">Home</LinkTo>
-        <LinkTo to="/projects">Projects</LinkTo>
-        <LinkTo to="/resume">Resume</LinkTo>
-        <LinkTo to="/contact">Contact</LinkTo>
+        <Menu></Menu>
       </Anchors>
     </Nav>
   );
