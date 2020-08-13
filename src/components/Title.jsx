@@ -10,6 +10,7 @@ const Button = styled.button`
   line-height: 26px;
   background: none;
   color: #d9d9d9;
+  outline: none;
 `;
 
 const Title = ({ children }) => {
