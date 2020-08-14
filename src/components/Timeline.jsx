@@ -26,7 +26,6 @@ const Span = styled.span`
 `;
 
 const Timeline = ({ children }) => {
-  console.log(children);
   return (
     <TimelineContainer>
       <Title>Timeline</Title>

@@ -31,3 +31,21 @@ export const linkedin = (
       d="M50.53,48.73H67.89v8h.24c2.42-4.58,8.32-9.41,17.13-9.41C103.6,47.28,107,59.35,107,75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87,7.36-10.87,15V107H50.53Z"></ColorBg>
   </svg>
 );
+
+export const burgerIcon = (
+  <svg viewBox="0 0 100 80" width="40" height="40">
+    <rect width="100" height="12" rx="5" style={{ fill: '#e58f46' }}></rect>
+    <rect
+      y="30"
+      width="100"
+      height="12"
+      rx="5"
+      style={{ fill: '#e58f46' }}></rect>
+    <rect
+      y="60"
+      width="100"
+      height="12"
+      rx="5"
+      style={{ fill: '#e58f46' }}></rect>
+  </svg>
+);

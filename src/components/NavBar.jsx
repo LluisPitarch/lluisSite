@@ -2,27 +2,11 @@ import React from 'react';
 import Logo from './Logo';
 
 import styled from 'styled-components';
-import { Link } from '@reach/router';
 import Menu from './Menu';
 
 const Nav = styled.nav`
   margin-top: 20px;
   width: 100%;
-`;
-
-const LinkTo = styled(Link)`
-  display: inline-block;
-  margin-left: 80px;
-  font-size: 18px;
-  margin-top: 10px;
-  text-decoration: none;
-  color: #d9d9d9;
-  border-bottom: solid #d9d9d9 transparent 3px;
-  &[aria-current] {
-    font-weight: 500;
-    border-bottom: solid 3px #d9d9d9;
-    transition: all 0.2s ease-in-out;
-  }
 `;
 
 const LogoStyled = styled(Logo)`
@@ -40,7 +24,7 @@ const NavBar = () => {
     <Nav>
       <LogoStyled />
       <Anchors>
-        <Menu></Menu>
+        <Menu />
       </Anchors>
     </Nav>
   );

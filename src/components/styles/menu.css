@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+nav {
+    background: #333;
+    text-align: right;
+    color: #fff;
+    font-family: arial;
+    position: relative;
+    height: 60px
+}
+
+.menu {
+    display: none;
+    padding: 20px;
+    padding-right: 30px
+}
+
+nav ul {
+    list-style: none;
+    padding: 18px
+}
+
+nav ul li {
+    display: inline-block;
+    padding-right: 10px
+}
+
+@media (max-width:767px) {
+
+    .menu {
+        display: block
+    }
+
+    ul {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        display: none;
+        width: 100px;
+        background: #333;
+
+    }
+
+    li {
+        display: block;
+        text-align: center;
+        padding: 10px
+    }
+
+    .menu:hover+ul,
+    ul:hover {
+        display: block
+    }
+
+}
