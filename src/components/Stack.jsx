@@ -8,9 +8,8 @@ const StackContainer = styled.section`
 `;
 
 const StackIconContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
   grid-auto-rows: minmax(100px, auto);
   margin-top: 60px;
 `;
@@ -18,6 +17,7 @@ const IconContainer = styled.div`
   box-sizing: border-box;
   background: #e5e5e5;
   width: 130px;
+  margin: 20px;
   border-radius: 15px;
   padding: 15px;
 `;

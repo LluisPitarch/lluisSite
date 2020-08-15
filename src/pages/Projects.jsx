@@ -29,11 +29,26 @@ const Projects = () => {
       </TitleContainer>
 
       <GroupOfCards>
-        <Card title="Projects" subtitle="- React SPA" color={1} />
-        <Card title="Resume" subtitle="- Instagram Clone" color={2} />
-        <Card title="Contact" subtitle="- Netflix Clone" color={3} />
-        <Card title="Resume" subtitle="- React SPA" color={1} />
-        <Card title="Contact" subtitle="- Wordpress site" color={2} />
+        <Card width="100" title="Projects" subtitle="- React SPA" color={1} />
+        <Card
+          width="100"
+          title="Resume"
+          subtitle="- Instagram Clone"
+          color={2}
+        />
+        <Card
+          width="100"
+          title="Contact"
+          subtitle="- Netflix Clone"
+          color={3}
+        />
+        <Card width="100" title="Resume" subtitle="- React SPA" color={1} />
+        <Card
+          width="100"
+          title="Contact"
+          subtitle="- Wordpress site"
+          color={2}
+        />
       </GroupOfCards>
     </>
   );

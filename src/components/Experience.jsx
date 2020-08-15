@@ -3,6 +3,7 @@ import Title from './Title';
 import Card from './Card';
 
 import styled from 'styled-components';
+import GroupOfCards from './GroupOfCards';
 
 const ExperienceContainer = styled.section`
   margin: 100px 0;
@@ -17,16 +18,17 @@ const Experience = ({ children }) => {
     <ExperienceContainer>
       <Title>Experience</Title>
       <ExperienceContainerItems>
-        {children.map((item) => {
-          return (
-            <Card
-              width="30%"
-              height="auto"
-              title={item.title}
-              subtitle={`- at ${item.company} | ${item.year}`}
-            />
-          );
-        })}
+        <GroupOfCards>
+          {children.map((item) => {
+            return (
+              <Card
+                width="100%"
+                title={item.title}
+                subtitle={`- at ${item.company} | ${item.year}`}
+              />
+            );
+          })}
+        </GroupOfCards>
       </ExperienceContainerItems>
     </ExperienceContainer>
   );

@@ -33,19 +33,19 @@ export const linkedin = (
 );
 
 export const burgerIcon = (
-  <svg viewBox="0 0 100 80" width="40" height="40">
-    <rect width="100" height="12" rx="5" style={{ fill: '#e58f46' }}></rect>
-    <rect
-      y="30"
-      width="100"
-      height="12"
-      rx="5"
-      style={{ fill: '#e58f46' }}></rect>
-    <rect
-      y="60"
-      width="100"
-      height="12"
-      rx="5"
-      style={{ fill: '#e58f46' }}></rect>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 68">
+    <ColorIcon
+      class="cls-1"
+      d="M6,0A6,6,0,0,0,6,12H78A6,6,0,0,0,78,0ZM6,28A6,6,0,0,0,6,40H78a6,6,0,0,0,0-12ZM6,56A6,6,0,0,0,6,68H78a6,6,0,0,0,0-12Z"
+    />
+  </svg>
+);
+
+export const closeIcon = (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74.03 74.05">
+    <ColorIcon
+      class="cls-1"
+      d="M45.2,37,72.33,9.88A5.78,5.78,0,1,0,64.15,1.7L37,28.83,9.88,1.7A5.78,5.78,0,0,0,1.7,9.88L28.83,37,1.7,64.15a5.81,5.81,0,0,0,4.05,9.9A5.48,5.48,0,0,0,9.8,72.33L37,45.2,64.15,72.33a5.76,5.76,0,0,0,4,1.72,5.52,5.52,0,0,0,4.06-1.72,5.78,5.78,0,0,0,0-8.18Z"
+    />
   </svg>
 );

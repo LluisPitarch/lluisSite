@@ -5,27 +5,22 @@ import styled from 'styled-components';
 import Menu from './Menu';
 
 const Nav = styled.nav`
-  margin-top: 20px;
   width: 100%;
+  overflow: auto;
 `;
 
-const LogoStyled = styled(Logo)`
+const LogoStyled = styled.div`
   float: left;
-  margin-top: 100px;
-`;
-
-const Anchors = styled.div`
-  max-width: 700px;
-  float: right;
+  margin-top: 20px;
 `;
 
 const NavBar = () => {
   return (
     <Nav>
-      <LogoStyled />
-      <Anchors>
-        <Menu />
-      </Anchors>
+      <LogoStyled>
+        <Logo />
+      </LogoStyled>
+      <Menu />
     </Nav>
   );
 };

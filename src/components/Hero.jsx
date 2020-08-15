@@ -15,7 +15,7 @@ const Hero = () => {
     flex-direction: ${isTabletOrPhone ? 'column-reverse' : 'row'};
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 100px 0;
+    margin: ${isTabletOrPhone ? '30px 0%' : '100px 0%'};
   `;
 
   const Article = styled.article`
@@ -23,7 +23,7 @@ const Hero = () => {
   `;
 
   const Image = styled.image`
-    width: ${isTabletOrPhone ? '100%' : '46%'};
+    width: ${isTabletOrPhone ? '93%' : '46%'};
   `;
 
   const Title = styled.h1`
@@ -65,7 +65,7 @@ const Hero = () => {
         </div>
       </Article>
       <Image>
-        <Card image={image} width='100%' height='45vh' noClick></Card>
+        <Card image={image} width="100%" height="45vh" noClick></Card>
       </Image>
     </Section>
   );

@@ -46,12 +46,12 @@ const Card = ({ title, image, width, height, noClick, color, subtitle }) => {
 
   const Container = styled.div`
     box-sizing: border-box;
-    width: ${isTabletOrPhone ? '100%' : width ? width : '27%'};
+    width: '100%';
     position: relative;
     background: ${image ? `url(${image})` : BgColor(color)};
     background-size: cover;
     border-radius: 25px;
-    margin: 40px 0;
+    margin: 40px 20px 40px 0;
     padding: 0;
     min-height: 200px;
     height: ${height ? height : 'auto'};
@@ -87,7 +87,6 @@ const Card = ({ title, image, width, height, noClick, color, subtitle }) => {
     bottom: 30px;
     left: 20px;
     font-size: 18px;
-    }
   `;
 
   return (

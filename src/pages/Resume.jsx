@@ -29,11 +29,41 @@ const Cv = () => {
 
       <Timeline>
         {[
-          { id: 1, string: 'My First programing experience' },
-          { id: 2, string: 'Finish my digital marketing studies' },
-          { id: 3, string: 'Start working in digital world' },
-          { id: 4, string: 'Taking seriously to code' },
-          { id: 5, string: 'Join your company' },
+          {
+            id: 1,
+            string: 'My First programing experience',
+            align: 'flex-start',
+            textAlign: 'left',
+            justify: 'flex-start',
+          },
+          {
+            id: 2,
+            string: 'Finish my digital marketing studies',
+            align: 'flex-end',
+            textAlign: 'right',
+            justify: 'flex-end',
+          },
+          {
+            id: 3,
+            string: 'Start working in digital world',
+            align: 'flex-start',
+            textAlign: 'left',
+            justify: 'flex-start',
+          },
+          {
+            id: 4,
+            string: 'Taking seriously to code',
+            align: 'flex-end',
+            textAlign: 'right',
+            justify: 'flex-end',
+          },
+          {
+            id: 5,
+            string: 'Join your company',
+            align: 'flex-start',
+            textAlign: 'left',
+            justify: 'flex-start',
+          },
         ]}
       </Timeline>
 
