@@ -78,7 +78,7 @@ const Card = ({ title, image, width, height, noClick, color, subtitle }) => {
   `;
 
   const Title = styled.h3`
-    font-size: 40px;
+    font-size: ${isTabletOrPhone ? '35px' : '40px'};
     margin-left: 20px;
   `;
 

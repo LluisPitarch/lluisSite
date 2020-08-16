@@ -11,6 +11,7 @@ const ExperienceContainer = styled.section`
 
 const ExperienceContainerItems = styled.div`
   display: flex;
+  width: 100%;
 `;
 
 const Experience = ({ children }) => {
@@ -22,7 +23,8 @@ const Experience = ({ children }) => {
           {children.map((item) => {
             return (
               <Card
-                width="100%"
+                noClick={true}
+                width="100"
                 title={item.title}
                 subtitle={`- at ${item.company} | ${item.year}`}
               />

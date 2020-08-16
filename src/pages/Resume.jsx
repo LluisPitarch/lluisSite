@@ -24,6 +24,7 @@ const Cv = () => {
   return (
     <>
       <Card
+        noClick={true}
         width="100%"
         title="Check my resume and feel free to contact with me"></Card>
 

@@ -49,16 +49,16 @@ const Menu = () => {
 
   const BurgerIcon = styled.span`
     float: right;
-    margin-top: 20px;
-    width: 40px;
-    height: 40px;
+    margin-top: 30px;
+    width: 25px;
+    height: 25px;
   `;
 
   const CloseIcon = styled.span`
     display: block;
-    margin: 20px 0px 0px 20px;
-    width: 30px;
-    height: 30px;
+    margin: 30px 0px 0px 30px;
+    width: 20px;
+    height: 20px;
   `;
 
   const ResponsiveMenuContainer = styled.div`
