@@ -2,18 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Card from './Card';
-import image from '../img/dev-img.jpg';
 
-import { github, linkedin } from '../img/icons';
 import { useResponsive } from '../hooks/useResponsive';
 
-const Hero = () => {
+const Hero = (props) => {
   const { isBigScreen, isDesktop, isTabletOrPhone } = useResponsive();
 
   const Section = styled.section`
     display: flex;
     flex-direction: ${isTabletOrPhone ? 'column-reverse' : 'row'};
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
     margin: ${isTabletOrPhone ? '30px 0%' : '100px 0%'};
   `;
@@ -22,7 +21,7 @@ const Hero = () => {
     width: ${isTabletOrPhone ? '100%' : '46%'};
   `;
 
-  const Image = styled.image`
+  const Image = styled.div`
     width: ${isTabletOrPhone ? '93%' : '46%'};
   `;
 
@@ -54,18 +53,20 @@ const Hero = () => {
     <Section>
       <Article>
         <span>{`<h1>`}</span>
-        <Title>
-          Hi, I'm <br></br> Lluis Pitarch
-        </Title>
+        <Title>{props.title}</Title>
         <span>{`</h1>`}</span>
-        <SubTitle>{`I’m a front end javascript developer who loves bring ideas to live`}</SubTitle>
+        <SubTitle>{props.subtitle}</SubTitle>
         <div>
-          <IconContainer>{github}</IconContainer>
-          <IconContainer>{linkedin}</IconContainer>
+          <a target="_blank" href={props.srcIconOne} rel="noopener">
+            <IconContainer>{props.icon1}</IconContainer>
+          </a>
+          <a target="_blank" href={props.srcIconTwo} rel="noopener">
+            <IconContainer>{props.icon2}</IconContainer>
+          </a>
         </div>
       </Article>
       <Image>
-        <Card image={image} width="100%" height="45vh" noClick></Card>
+        <Card image={props.img} width="100%" height="50vh" noClick></Card>
       </Image>
     </Section>
   );

@@ -17,6 +17,7 @@ const Layout = ({ children }) => {
     : '4%';
 
   const Container = styled.div`
+    overflow: hidden;
     position: relative;
     padding: 0 ${margin};
     max-width: 100%;

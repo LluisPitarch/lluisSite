@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from '@reach/router';
 
 import styled from 'styled-components';
@@ -10,7 +10,6 @@ import { closeIcon } from '../img/icons';
 
 const Menu = () => {
   const { isTabletOrPhone, isSmallDesktop } = useResponsive();
-
   const LinkTo = styled(Link)`
     display: inline-block;
     margin-left: ${isSmallDesktop ? '27px' : '80px'};
@@ -68,41 +67,61 @@ const Menu = () => {
     right: -270px;
     background: #333333;
     display: block;
-    height: 100vh;
+    height: 120vh;
     z-index: 200000;
     transition: all 0.35s ease-in-out;
   `;
 
+  useEffect(() => {
+    if (isTabletOrPhone) {
+      window.addEventListener('scroll', () => {
+        let element = document.getElementById('ResponsiveMenuContainer');
+        element.style.right = 'close';
+      });
+    }
+  }, []);
+
+  const handleClick = (position) => {
+    let element = document.getElementById('ResponsiveMenuContainer');
+    if (position === 'open') {
+      element.style.right = '0px';
+    } else {
+      element.style.right = '-270px';
+    }
+  };
+
   return isTabletOrPhone ? (
     <>
-      <BurgerIcon
-        onClick={() => {
-          let element = document.getElementById('ResponsiveMenuContainer');
-          element.style.right = '0px';
-        }}>
-        {burgerIcon}
-      </BurgerIcon>
+      <BurgerIcon onClick={() => handleClick('open')}>{burgerIcon}</BurgerIcon>
       <ResponsiveMenuContainer id="ResponsiveMenuContainer">
-        <CloseIcon
-          onClick={() => {
-            let element = document.getElementById('ResponsiveMenuContainer');
-            element.style.right = '-270px';
-          }}>
-          {closeIcon}
-        </CloseIcon>
-        <LinkToRes to="/"> Home </LinkToRes>
-        <LinkToRes to="/projects">Projects </LinkToRes>
-        <LinkToRes to="/resume"> Resume</LinkToRes>
-        <LinkToRes to="/contact"> Contact</LinkToRes>
+        <CloseIcon onClick={() => handleClick('close')}>{closeIcon}</CloseIcon>
+        <LinkToRes onClick={() => handleClick('close')} to="/">
+          {' '}
+          Home{' '}
+        </LinkToRes>
+        <LinkToRes onClick={() => handleClick('close')} to="/projects">
+          Projects{' '}
+        </LinkToRes>
+        <LinkToRes onClick={() => handleClick('close')} to="/resume">
+          {' '}
+          Resume
+        </LinkToRes>
+        <LinkToRes onClick={() => handleClick('close')} to="/contact">
+          {' '}
+          Contact
+        </LinkToRes>
       </ResponsiveMenuContainer>
     </>
   ) : (
-    <DesktopMenuContainer>
-      <LinkTo to="/"> Home </LinkTo>
-      <LinkTo to="/projects">Projects </LinkTo>
-      <LinkTo to="/resume"> Resume</LinkTo>
-      <LinkTo to="/contact"> Contact</LinkTo>
-    </DesktopMenuContainer>
+    <>
+      <DesktopMenuContainer>
+        <LinkTo to="/"> Home </LinkTo>
+        <LinkTo to="/projects">Projects </LinkTo>
+        <LinkTo to="/resume"> Resume</LinkTo>
+        <LinkTo to="/contact"> Contact</LinkTo>
+      </DesktopMenuContainer>
+      <ResponsiveMenuContainer id="ResponsiveMenuContainer"></ResponsiveMenuContainer>
+    </>
   );
 };
 

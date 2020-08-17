@@ -23,6 +23,7 @@ const Experience = ({ children }) => {
           {children.map((item) => {
             return (
               <Card
+                key={item.id}
                 noClick={true}
                 width="100"
                 title={item.title}

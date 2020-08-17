@@ -4,6 +4,7 @@ import Card from '../components/Card';
 import GroupOfCards from '../components/GroupOfCards';
 
 import styled from 'styled-components';
+import { Link } from '@reach/router';
 
 const TitleContainer = styled.div`
   margin-top: 100px;
@@ -19,6 +20,11 @@ const Title = styled.h1`
   margin: 0;
 `;
 
+const LinkTo = styled(Link)`
+  text-decoration: none;
+  color: #d9d9d9;
+`;
+
 const Projects = () => {
   return (
     <>
@@ -29,26 +35,46 @@ const Projects = () => {
       </TitleContainer>
 
       <GroupOfCards>
-        <Card width="100" title="Projects" subtitle="- React SPA" color={1} />
-        <Card
-          width="100"
-          title="Resume"
-          subtitle="- Instagram Clone"
-          color={2}
-        />
-        <Card
-          width="100"
-          title="Contact"
-          subtitle="- Netflix Clone"
-          color={3}
-        />
-        <Card width="100" title="Resume" subtitle="- React SPA" color={1} />
-        <Card
-          width="100"
-          title="Contact"
-          subtitle="- Wordpress site"
-          color={2}
-        />
+        <LinkTo to="honey-quiz-spa">
+          <Card
+            width="100"
+            title="Honey Quiz SPA"
+            subtitle="- React SPA"
+            color={1}
+          />
+        </LinkTo>
+        <LinkTo to="pixtagram">
+          <Card
+            width="100"
+            title="Pixtagram"
+            subtitle="- Instagram Clone"
+            color={2}
+          />
+        </LinkTo>
+        <LinkTo to="applix">
+          <Card
+            width="100"
+            title="AppFlix"
+            subtitle="- Netflix Clone"
+            color={3}
+          />
+        </LinkTo>
+        <LinkTo to="art-portfolio">
+          <Card
+            width="100"
+            title="Art Portfolio"
+            subtitle="- React SPA"
+            color={1}
+          />
+        </LinkTo>
+        <LinkTo to="las-dehesas">
+          <Card
+            width="100"
+            title="Las Dehesas"
+            subtitle="- Wordpress site"
+            color={2}
+          />
+        </LinkTo>
       </GroupOfCards>
     </>
   );

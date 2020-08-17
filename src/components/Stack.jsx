@@ -4,38 +4,45 @@ import Title from './Title';
 import styled from 'styled-components';
 import { useResponsive } from '../hooks/useResponsive';
 
-const Stack = ({ children }) => {
-  const { isTabletOrPhone } = useResponsive();
+const Stack = ({ children, cols }) => {
+  const { isSmallDesktop, isTablet, isPhone } = useResponsive();
 
-  const StackContainer = styled.section`
-    margin: 100px 0;
-  `;
+  const StackContainer = styled.section``;
 
   const StackIconContainer = styled.div`
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    grid-auto-rows: minmax(100px, auto);
+    display: grid;
+    grid-template-columns: ${cols
+      ? `repeat(${cols}, 1fr)`
+      : isSmallDesktop
+      ? 'repeat(5, 1fr)'
+      : isTablet
+      ? 'repeat(4, 1fr)'
+      : isPhone
+      ? 'repeat(3, 1fr)'
+      : 'repeat(7, 1fr)'};
+    grid-gap: 20px;
     margin-top: 60px;
   `;
   const IconContainer = styled.div`
     box-sizing: border-box;
     background: #e5e5e5;
-    width: ${isTabletOrPhone ? '85px' : '130px'};
-    margin: ${isTabletOrPhone ? '15px' : '20px'};
+    width: 100%;
+    margin: 0px;
     border-radius: 15px;
     padding: 15px;
   `;
 
-  return (
+  return children ? (
     <StackContainer>
       <Title>Stack</Title>
       <StackIconContainer>
         {children.map((item) => {
-          return <IconContainer>{item.img}</IconContainer>;
+          return <IconContainer key={item.id}>{item.img}</IconContainer>;
         })}
       </StackIconContainer>
     </StackContainer>
+  ) : (
+    ''
   );
 };
 
