@@ -2,7 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { useResponsive } from '../hooks/useResponsive';
 
-const Card = ({ title, image, width, height, noClick, color, subtitle }) => {
+const Card = ({
+  title,
+  image,
+  width,
+  height,
+  noClick,
+  color,
+  subtitle,
+  fontSize,
+  subFontSize,
+}) => {
   const { isTabletOrPhone } = useResponsive();
 
   const hover = (noClick) => {
@@ -46,17 +56,18 @@ const Card = ({ title, image, width, height, noClick, color, subtitle }) => {
 
   const Container = styled.div`
     box-sizing: border-box;
-    width: '100%';
+    /* width: 100%; */
     position: relative;
     background: ${image ? `url(${image})` : BgColor(color)};
     background-size: cover;
     border-radius: 25px;
     margin: 40px 20px 40px 0;
-    padding: 0;
+    padding: 20px;
     min-height: 200px;
     height: ${height ? height : 'auto'};
     border: 3px solid #d9d9d9;
     transition: all 0.15s ease-in-out;
+    background-position-y: center;
 
     & ::after {
       z-index: -1;
@@ -78,15 +89,11 @@ const Card = ({ title, image, width, height, noClick, color, subtitle }) => {
   `;
 
   const Title = styled.h3`
-    font-size: ${isTabletOrPhone ? '35px' : '40px'};
-    margin-left: 20px;
+    font-size: ${fontSize ? fontSize : isTabletOrPhone ? '35px' : '40px'};
   `;
 
   const Subtitle = styled.span`
-    position: absolute;
-    bottom: 30px;
-    left: 20px;
-    font-size: 18px;
+    font-size: ${subFontSize ? subFontSize : '20px'};
   `;
 
   return (

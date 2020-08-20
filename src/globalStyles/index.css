@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'FiraCode Bold';
+  src: local('FiraCode Bold'), url('../fonts/FiraCode-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FiraCode Regular';
+  src: local('FiraCode Regular'), url('../fonts/FiraCode-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FiraCode Light';
+  src: local('FiraCode Light'), url('../fonts/FiraCode-Light.ttf') format('truetype');
+}
+
 html {
   position: relative;
 }
@@ -13,6 +28,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   font-size: 18px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'FiraCode Bold'
 }
 
 #root {

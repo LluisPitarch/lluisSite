@@ -1,9 +1,9 @@
 import React from 'react';
-import { ReactIcon, Redux, Firebase } from './img/devIcons';
+import { ReactIcon, Redux, Firebase } from '../img/devIcons';
 
-const screenshotHoney1 = require('./img/projects/honey-quiz/screenshot-one-honey-quiz-spa.png');
-const screenshotHoney2 = require('./img/projects/honey-quiz/screenshot-two-honey-quiz-spa.png');
-const honeyCover = require('./img/projects/honey-quiz/quiz-app-img.png');
+const screenshotHoney1 = require('../img/projects/honey-quiz/screenshot-one-honey-quiz-spa.png');
+const screenshotHoney2 = require('../img/projects/honey-quiz/screenshot-two-honey-quiz-spa.png');
+const honeyCover = require('../img/projects/honey-quiz/quiz-app-img.png');
 
 export const Projects = [
   {

@@ -62,16 +62,24 @@ const Footer = () => {
       <ColR className="col-2">
         <UL>
           <Li>
-            <LinkTo to="/">Home</LinkTo>
+            <LinkTo onClick="window.scrollTo(0, 0);" to="/">
+              Home
+            </LinkTo>
           </Li>
           <Li>
-            <LinkTo to="/projects">Projects</LinkTo>
+            <LinkTo onClick="window.scrollTo(0, 0);" to="/projects">
+              Projects
+            </LinkTo>
           </Li>
           <Li>
-            <LinkTo to="/resume">Resume</LinkTo>
+            <LinkTo onClick="window.scrollTo(0, 0);" to="/resume">
+              Resume
+            </LinkTo>
           </Li>
           <Li>
-            <LinkTo to="/contact">Contact</LinkTo>
+            <LinkTo onClick="window.scrollTo(0, 0);" to="/contact">
+              Contact
+            </LinkTo>
           </Li>
         </UL>
       </ColR>

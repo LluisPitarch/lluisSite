@@ -4,6 +4,9 @@ import Title from './Title';
 import styled from 'styled-components';
 import { useResponsive } from '../hooks/useResponsive';
 
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
+
 const ProjectScreenshots = (props) => {
   const { isTabletOrPhone } = useResponsive();
 
@@ -20,7 +23,7 @@ const ProjectScreenshots = (props) => {
   `;
 
   const Img = styled.img`
-    width: ${isTabletOrPhone ? '100%' : '48%'};
+    width: 100%;
     border: solid #d9d9d9 3px;
     border-radius: 10px;
     margin: 10px 0px;
@@ -31,7 +34,11 @@ const ProjectScreenshots = (props) => {
       <Title>Screenshots</Title>
       <ImgContainer>
         {props.screenshots.map((img) => {
-          return <Img key={img.id} src={img.src} alt="img" />;
+          return (
+            <Zoom>
+              <Img key={img.id} src={img.src} alt="img" />
+            </Zoom>
+          );
         })}
       </ImgContainer>
     </ScreenshotsContainer>

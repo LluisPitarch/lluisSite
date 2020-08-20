@@ -4,9 +4,9 @@ import Hero from '../components/Hero';
 import ProjectStack from '../components/ProjectStack';
 import ProjectScreenshots from '../components/ProjectScreenshots';
 
-import { github, linkedin } from '../img/icons';
+import { github, externalLink } from '../img/icons';
 
-import { Projects } from '../data.js';
+import { Projects } from '../data/data.js';
 
 const ProjectDetail = (props) => {
   const [project, setProject] = useState('');
@@ -21,10 +21,10 @@ const ProjectDetail = (props) => {
         title={project.title}
         subtitle={project.description}
         img={project.img}
-        icon1={linkedin}
-        srcIconOne="https://github.com/LluisPitarch"
+        icon1={externalLink}
+        srcIconOne="https://quiz-honey.netlify.app/"
         icon2={github}
-        srcIconTwo="https://www.linkedin.com/in/lluis-pitarch/"
+        srcIconTwo="https://github.com/LluisPitarch/honey-quiz"
       />
       <ProjectStack
         description={project.description}

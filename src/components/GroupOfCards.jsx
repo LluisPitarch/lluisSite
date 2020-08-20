@@ -2,13 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { useResponsive } from '../hooks/useResponsive';
 
-const GroupOfCards = ({ children }) => {
+const GroupOfCards = ({ children, col }) => {
   const { isSmallDesktop, isTabletOrPhone } = useResponsive();
 
   const Section = styled.section`
     width: 100%;
     display: grid;
-    grid-template-columns: ${isSmallDesktop
+    grid-template-columns: ${col
+      ? `repeat(${col}, 1fr)`
+      : isSmallDesktop
       ? 'repeat(2, 1fr)'
       : isTabletOrPhone
       ? 'repeat(1, 1fr)'

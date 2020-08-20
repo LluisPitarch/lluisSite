@@ -1,4 +1,6 @@
 import React from 'react';
+import { useResponsive } from '../hooks/useResponsive';
+
 import Title from './Title';
 import Card from './Card';
 
@@ -11,26 +13,28 @@ const ExperienceContainer = styled.section`
 
 const ExperienceContainerItems = styled.div`
   display: flex;
+
   width: 100%;
 `;
 
 const Experience = ({ children }) => {
+  const { isBigScreen, isDesktop, isTabletOrPhone } = useResponsive();
+
   return (
     <ExperienceContainer>
       <Title>Experience</Title>
       <ExperienceContainerItems>
-        <GroupOfCards>
-          {children.map((item) => {
-            return (
-              <Card
-                key={item.id}
-                noClick={true}
-                width="100"
-                title={item.title}
-                subtitle={`- at ${item.company} | ${item.year}`}
-              />
-            );
-          })}
+        <GroupOfCards col={isBigScreen ? 4 : isDesktop ? 3 : 1}>
+          {children.map((item) => (
+            <Card
+              fontSize="27px"
+              subFontSize="16px"
+              noClick={true}
+              width="100"
+              title={item.title}
+              subtitle={`- at ${item.company} | ${item.year}`}
+            />
+          ))}
         </GroupOfCards>
       </ExperienceContainerItems>
     </ExperienceContainer>
