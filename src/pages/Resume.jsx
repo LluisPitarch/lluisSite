@@ -18,6 +18,11 @@ import {
   Express,
   Firebase,
   Mongo,
+  StyledComponents,
+  AdobeIllustrator,
+  AdobeXd,
+  Figma,
+  Webpack,
 } from '../img/devIcons';
 
 const Cv = () => {
@@ -74,7 +79,7 @@ const Cv = () => {
           { id: 2, title: 'Postgraduate in Digital Marketing (UPV)' },
           {
             id: 3,
-            title: '1.165.743 Coding courses in different platforms done',
+            title: '1 billion of Coding courses in different platforms',
             img: PlatziLogo,
             href: 'https://platzi.com/@lluis-pitarch-ripolles/',
           },
@@ -147,6 +152,26 @@ const Cv = () => {
           {
             id: 9,
             img: Mongo,
+          },
+          {
+            id: 10,
+            img: StyledComponents,
+          },
+          {
+            id: 11,
+            img: Webpack,
+          },
+          {
+            id: 12,
+            img: AdobeIllustrator,
+          },
+          {
+            id: 13,
+            img: AdobeXd,
+          },
+          {
+            id: 14,
+            img: Figma,
           },
         ]}
       </Stack>

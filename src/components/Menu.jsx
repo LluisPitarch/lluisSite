@@ -18,6 +18,8 @@ const Menu = () => {
     text-decoration: none;
     color: #d9d9d9;
     border-bottom: solid #d9d9d9 transparent 3px;
+    letter-spacing: 1px;
+    font-family: 'FiraCode Regular';
     &[aria-current] {
       font-weight: 500;
       border-bottom: solid 3px #d9d9d9;

@@ -39,7 +39,9 @@ const ProjectStack = ({ stack, tasks, description }) => {
         <Col>
           <ul style={{ padding: 0 }}>
             {tasks
-              ? tasks.map((item) => <Li key={item.id}>=> {item.string}</Li>)
+              ? tasks.map((item) => (
+                  <h3 key={item.id}>{`=> ${item.string}`}</h3>
+                ))
               : ''}
           </ul>
           <p>{description}</p>
