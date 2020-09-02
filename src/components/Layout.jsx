@@ -5,6 +5,8 @@ import Footer from './Footer';
 import styled from 'styled-components';
 import { useResponsive } from '../hooks/useResponsive';
 
+import bg from '../img/bg.svg';
+
 const Layout = ({ children }) => {
   const { isBigScreen, isDesktop, isTablet } = useResponsive();
 
@@ -17,6 +19,8 @@ const Layout = ({ children }) => {
     : '4%';
 
   const Container = styled.div`
+    /* background-repeat: repeat;
+    background-image: url(${bg}); */
     overflow: hidden;
     position: relative;
     padding: 0 ${margin};

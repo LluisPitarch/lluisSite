@@ -5,7 +5,6 @@ import { useResponsive } from '../hooks/useResponsive';
 const Card = ({
   title,
   image,
-  width,
   height,
   noClick,
   color,
@@ -58,6 +57,9 @@ const Card = ({
     box-sizing: border-box;
     /* width: 100%; */
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     background: ${image ? `url(${image})` : BgColor(color)};
     background-size: cover;
     border-radius: 25px;
@@ -90,9 +92,11 @@ const Card = ({
 
   const Title = styled.h3`
     font-size: ${fontSize ? fontSize : isTabletOrPhone ? '35px' : '40px'};
+    color: #f3f3f3;
   `;
 
   const Subtitle = styled.span`
+    display: block;
     font-size: ${subFontSize ? subFontSize : '20px'};
   `;
 

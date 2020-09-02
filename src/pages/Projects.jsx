@@ -35,33 +35,25 @@ const Projects = () => {
       </TitleContainer>
 
       <GroupOfCards>
-        <LinkTo to="honey-quiz-spa">
+        <LinkTo to="appflix">
           <Card
-            width="100"
-            title="Honey Quiz SPA"
-            subtitle="- React SPA"
-            color={1}
-          />
-        </LinkTo>
-        <LinkTo to="pixtagram">
-          <Card
-            width="100"
-            title="Pixtagram"
-            subtitle="- Instagram Clone"
-            color={2}
-          />
-        </LinkTo>
-        <LinkTo to="applix">
-          <Card
-            width="100"
+            height="300px"
             title="AppFlix"
             subtitle="- Netflix Clone"
             color={3}
           />
         </LinkTo>
+        <LinkTo to="honey-quiz-spa">
+          <Card
+            height="300px"
+            title="Honey Quiz SPA"
+            subtitle="- React SPA"
+            color={1}
+          />
+        </LinkTo>
         <LinkTo to="art-portfolio">
           <Card
-            width="100"
+            height="300px"
             title="Art Portfolio"
             subtitle="- React SPA"
             color={1}
@@ -69,7 +61,7 @@ const Projects = () => {
         </LinkTo>
         <LinkTo to="las-dehesas">
           <Card
-            width="100"
+            height="300px"
             title="Las Dehesas"
             subtitle="- Wordpress site"
             color={2}

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from '@reach/router';
 import { useResponsive } from '../hooks/useResponsive';
+import { whiteGitHub, whiteLinkedin } from '../img/icons';
 
 const Footer = () => {
   const { isTabletOrPhone } = useResponsive();
@@ -23,11 +24,11 @@ const Footer = () => {
   `;
 
   const ColL = styled.div`
-    width: ${isTabletOrPhone ? '100%' : '60%'};
+    width: ${isTabletOrPhone ? '100%' : '80%'};
   `;
 
   const ColR = styled.div`
-    width: ${isTabletOrPhone ? '100%' : '40%'};
+    width: ${isTabletOrPhone ? '100%' : '20%'};
   `;
 
   const LinkTo = styled(Link)`
@@ -53,11 +54,31 @@ const Footer = () => {
     list-style: none;
   `;
 
+  const IconContainer = styled.div`
+    width: 20px;
+    display: inline-block;
+    margin: 20px 10px 0px 0px;
+  `;
+
   return (
     <FooterDiv>
       <ColL className="col-1">
-        <p>You can contact easily with me via mail:</p>
+        <p>Feel free to contact, or connect with me on Linkedin</p>
         <span>{`lluispitarchripolles[at]gmail.com`}</span>
+        <div>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/lluis-pitarch/"
+            rel="noopener">
+            <IconContainer>{whiteLinkedin}</IconContainer>
+          </a>
+          <a
+            target="_blank"
+            href="https://github.com/LluisPitarch"
+            rel="noopener">
+            <IconContainer>{whiteGitHub}</IconContainer>
+          </a>
+        </div>
       </ColL>
       <ColR className="col-2">
         <UL>

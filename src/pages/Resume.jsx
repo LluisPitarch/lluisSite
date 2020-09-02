@@ -31,13 +31,13 @@ const Cv = () => {
       <Card
         noClick={true}
         width="100%"
-        title="Check my resume and feel free to contact with me"></Card>
+        title="Check my resume and feel free to contact me"></Card>
 
       <Timeline>
         {[
           {
             id: 1,
-            string: 'My First programing experience',
+            string: 'First programing experience',
             align: 'flex-start',
             textAlign: 'left',
             justify: 'flex-start',
@@ -46,40 +46,51 @@ const Cv = () => {
             id: 2,
             string: 'Finish my digital marketing studies',
             align: 'flex-end',
-            textAlign: 'right',
+            textAlign: 'center',
             justify: 'flex-end',
           },
           {
             id: 3,
-            string: 'Start working in digital world',
+            string: 'Taking code seriously',
             align: 'flex-start',
-            textAlign: 'left',
+            textAlign: 'center',
             justify: 'flex-start',
           },
           {
             id: 4,
-            string: 'Taking seriously to code',
+            string: 'Start working in digital world',
             align: 'flex-end',
-            textAlign: 'right',
+            textAlign: 'center',
             justify: 'flex-end',
           },
           {
             id: 5,
-            string: 'Join your company',
+            string: 'Taking it more seriously',
             align: 'flex-start',
-            textAlign: 'left',
+            textAlign: 'center',
             justify: 'flex-start',
+          },
+          {
+            id: 6,
+            string: 'Join your company',
+            align: 'flex-end',
+            textAlign: 'right',
+            justify: 'flex-end',
           },
         ]}
       </Timeline>
 
       <Education>
         {[
-          { id: 1, title: 'Business Administration Degree (UJI)' },
-          { id: 2, title: 'Postgraduate in Digital Marketing (UPV)' },
+          {
+            id: 1,
+            title: 'First of all, Business Administration Degree (UJI)',
+          },
+          { id: 2, title: 'After, Postgraduate in Digital Marketing (UPV)' },
           {
             id: 3,
-            title: '1 billion of Coding courses in different platforms',
+            title:
+              'Constantly improving my code skills with the best web development courses',
             img: PlatziLogo,
             href: 'https://platzi.com/@lluis-pitarch-ripolles/',
           },

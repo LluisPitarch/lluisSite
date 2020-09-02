@@ -17,12 +17,20 @@ const LinkTo = styled(Link)`
   color: #d9d9d9;
 `;
 
+const P = styled.p`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #d9d9d9;
+  margin: 30px 0;
+`;
+
 const Home = () => {
   return (
     <>
       <Hero
         title={`Hi, I'm Lluis Pitarch`}
-        subtitle="I’m a front end javascript developer who loves bring ideas to live"
+        subtitle="I’m a javascript developer who loves shape and bring ideas to live"
         img={image}
         icon1={github}
         srcIconOne="https://github.com/LluisPitarch"
@@ -30,20 +38,16 @@ const Home = () => {
         srcIconTwo="https://www.linkedin.com/in/lluis-pitarch/"
       />
       <Title>About Me</Title>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus
-        vel, amet, placeat ratione commodi numquam aliquam praesentium illo
-        laboriosam impedit soluta dolore itaque dignissimos quibusdam, non
-        recusandae ut odio. Corporis quas ab, repellendus placeat debitis autem
-        maiores laudantium distinctio ducimus ipsum aperiam voluptates! Fugiat
-        iusto quasi enim dolorem asperiores beatae architecto libero nisi illo
-        <br></br>
-        <br></br>
-        Quisquam ullam obcaecati incidunt possimus nesciunt sequi optio rerum
-        tenetur dolores dicta saepe non, id vitae praesentium? Reiciendis
-        tenetur laudantium, nulla sapiente laboriosam impedit officia pariatur
-        omnis quibusdam voluptate nisi placeat nam assumenda? Earum aut dolores
-      </p>
+      <P>
+        I am formally graduated in Business Administration and Marketing, also I
+        would define myself as self-taught in this digital world.
+        <br />
+        <br />
+        Few years ago, I started learning web development to create different
+        digital projects and products. Now I am immersed in web development
+        field, so I feel very comfortable with modern technology stacks such as
+        MERN one based in React.
+      </P>
 
       <GroupOfCards>
         <LinkTo onClick="window.scrollTo(0, 0);" to="/projects">

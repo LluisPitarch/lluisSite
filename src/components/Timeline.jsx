@@ -21,15 +21,15 @@ const Timeline = ({ children }) => {
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
-    height: ${isTabletOrPhone ? '650px' : '230px'};
+    height: ${isTabletOrPhone ? '650px' : '270px'};
     margin-top: 30px;
     background-size: contain;
     background-position: center;
-    background-position-y: ${isSmallDesktop ? '50px' : '30px'};
+    background-position-y: ${isSmallDesktop ? '50px' : '60px'};
   `;
 
   const StringContainer = styled.div`
-    width: ${isTabletOrPhone ? '100%' : '18%'};
+    width: ${isTabletOrPhone ? '100%' : '15%'};
     display: ${isTabletOrPhone ? 'flex' : 'block'};
   `;
 
