@@ -53,6 +53,8 @@ export const Projects = [
       { id: 1, string: 'UI / UX Design' },
       { id: 2, string: 'Developement' },
     ],
+    shortDescription:
+      'Quiz app to know which type of honey is better for your taste.',
     description:
       'This is a serverless SPA builded in React. Firebase is running as a database and their Cloud Functions allows to easily develop this quiz app.',
     screenshots: [
