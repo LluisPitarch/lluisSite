@@ -1,4 +1,4 @@
-import MediaQuery, { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from 'react-responsive';
 
 export const useResponsive = () => {
   const isBigScreen = useMediaQuery({

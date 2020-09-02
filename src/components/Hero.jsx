@@ -6,7 +6,7 @@ import Card from './Card';
 import { useResponsive } from '../hooks/useResponsive';
 
 const Hero = (props) => {
-  const { isBigScreen, isDesktop, isTabletOrPhone } = useResponsive();
+  const { isTabletOrPhone } = useResponsive();
 
   const Section = styled.section`
     display: flex;
@@ -57,10 +57,10 @@ const Hero = (props) => {
         <span>{`</h1>`}</span>
         <SubTitle>{props.subtitle}</SubTitle>
         <div>
-          <a target="_blank" href={props.srcIconOne} rel="noopener">
+          <a href={props.srcIconOne} rel="noopener noreferrer">
             <IconContainer>{props.icon1}</IconContainer>
           </a>
-          <a target="_blank" href={props.srcIconTwo} rel="noopener">
+          <a href={props.srcIconTwo} rel="noopener noreferrer">
             <IconContainer>{props.icon2}</IconContainer>
           </a>
         </div>

@@ -67,15 +67,11 @@ const Footer = () => {
         <span>{`lluispitarchripolles[at]gmail.com`}</span>
         <div>
           <a
-            target="_blank"
-            href="https://www.linkedin.com/in/lluis-pitarch/"
-            rel="noopener">
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/lluis-pitarch/">
             <IconContainer>{whiteLinkedin}</IconContainer>
           </a>
-          <a
-            target="_blank"
-            href="https://github.com/LluisPitarch"
-            rel="noopener">
+          <a rel="noopener noreferrer" href="https://github.com/LluisPitarch">
             <IconContainer>{whiteGitHub}</IconContainer>
           </a>
         </div>

@@ -81,7 +81,7 @@ const Menu = () => {
         element.style.right = 'close';
       });
     }
-  }, []);
+  }, [isTabletOrPhone]);
 
   const handleClick = (position) => {
     let element = document.getElementById('ResponsiveMenuContainer');

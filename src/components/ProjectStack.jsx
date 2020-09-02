@@ -14,10 +14,6 @@ const ProjectStack = ({ stack, tasks, description }) => {
     width: ${isTabletOrPhone ? '100%' : '48%'};
   `;
 
-  const Li = styled.li`
-    list-style: none;
-  `;
-
   const ColContainer = styled.div`
     display: flex;
     flex-direction: row;

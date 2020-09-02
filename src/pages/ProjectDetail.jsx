@@ -10,10 +10,13 @@ import { Projects } from '../data/data.js';
 
 const ProjectDetail = (props) => {
   const [project, setProject] = useState('');
+
+  const projectNameProps = props.name;
   useEffect(() => {
-    const FindProject = Projects.find((item) => item.path === props.name) || {};
+    const FindProject =
+      Projects.find((item) => item.path === projectNameProps) || {};
     setProject(FindProject);
-  }, []);
+  }, [projectNameProps]);
 
   return (
     <>

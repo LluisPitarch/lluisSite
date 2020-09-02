@@ -18,7 +18,7 @@ const ExperienceContainerItems = styled.div`
 `;
 
 const Experience = ({ children }) => {
-  const { isBigScreen, isDesktop, isTabletOrPhone } = useResponsive();
+  const { isBigScreen, isDesktop } = useResponsive();
 
   return (
     <ExperienceContainer>
