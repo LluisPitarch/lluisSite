@@ -37,8 +37,18 @@ const Contact = () => {
       <p>You can contact me easily sending a mail to: </p>
       <Link href="mailto:lluispitarchripolles@gmail.com">{`lluispitarchripolles[at]gmail.com`}</Link>
       <IconsContainer>
-        <IconContainer>{github}</IconContainer>
-        <IconContainer>{linkedin}</IconContainer>
+        <a
+          href="https://github.com/LluisPitarch"
+          rel="noopener noreferrer"
+          target="_blank">
+          <IconContainer>{github}</IconContainer>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/lluis-pitarch/"
+          rel="noopener noreferrer"
+          target="_blank">
+          <IconContainer>{linkedin}</IconContainer>
+        </a>
       </IconsContainer>
     </ContactContainer>
   );

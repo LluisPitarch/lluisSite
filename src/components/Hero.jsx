@@ -57,10 +57,10 @@ const Hero = (props) => {
         <span>{`</h1>`}</span>
         <SubTitle>{props.subtitle}</SubTitle>
         <div>
-          <a href={props.srcIconOne} rel="noopener noreferrer">
+          <a href={props.srcIconOne} rel="noopener noreferrer" target="_blank">
             <IconContainer>{props.icon1}</IconContainer>
           </a>
-          <a href={props.srcIconTwo} rel="noopener noreferrer">
+          <a href={props.srcIconTwo} rel="noopener noreferrer" target="_blank">
             <IconContainer>{props.icon2}</IconContainer>
           </a>
         </div>
