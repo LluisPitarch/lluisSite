@@ -43,10 +43,10 @@ const Home = () => {
         would define myself as self-taught in this digital world.
         <br />
         <br />
-        Few years ago, I started learning web development to create different
-        digital projects and products. Now I am immersed in web development
-        field, so I feel very comfortable with modern technology stacks such as
-        MERN one based in React.
+        Few years ago, I started learning web development to be able to create
+        different projects and digital products. Now I am immersed in web
+        development field. I feel very comfortable with modern technology
+        stacks, specially MERN one based in React.
       </P>
 
       <GroupOfCards>

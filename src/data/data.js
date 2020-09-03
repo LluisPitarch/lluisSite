@@ -101,7 +101,7 @@ export const Projects = [
     shortDescription:
       'This is a Netflix clone based in a Node.js API & Mongo DB database with a SSR frontend builded in React. Appflix allows you to register, login, see different TV shows and save them to a personal list.',
     description:
-      'The backend is builded with node and express, also counts with Passport.js to manage authentication for login and register. The front end uses the cookies browser to store the JWT and stay logged. Furthermore the front end is build with React plus Redux (to manage a global state within the different components, share it and fire different actions)',
+      'The backend is builded with Node Js and Express Server Library, also counts with Passport.js to manage authentication for login and register. The front end uses the cookies browser to store the JWT and stay logged. Furthermore the front end is build with React & Redux (to manage a global state within the different components, share it and fire different actions)',
     screenshots: [
       { id: 1, src: screenshotAppflix1 },
       { id: 2, src: screenshotAppflix2 },
@@ -134,7 +134,7 @@ export const Projects = [
     shortDescription:
       'This is a single page app to show a visual artist portfolio page.',
     description:
-      'The page was build in react using the Create React App CLI to speed up the initial config, also i use the Bootstrap-react to use Nav component and slider one.',
+      'The page was build in react using the Create React App CLI to speed up the initial config, also I use the Bootstrap-react library to get the Nav component and slider one.',
     screenshots: [
       { id: 1, src: screenshotArt1 },
       { id: 2, src: screenshotArt2 },
@@ -164,7 +164,7 @@ export const Projects = [
       { id: 1, string: 'UI / UX Design' },
       { id: 2, string: 'Developement' },
     ],
-    shortDescription: 'Wordpress site for a honey e-commerce ',
+    shortDescription: 'E-commerce based in Wordpress for a honey brand',
     description:
       'The project is an functional e-commerce to a honey brand, the site was build with Wordpress and Woocommerce. I made a custom design and theme development based on the needs',
     screenshots: [

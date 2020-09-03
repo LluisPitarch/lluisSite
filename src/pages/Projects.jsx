@@ -35,7 +35,7 @@ const Projects = () => {
       </TitleContainer>
 
       <GroupOfCards>
-        <LinkTo to="appflix">
+        <LinkTo onClick="window.scrollTo(0, 0);" to="appflix">
           <Card
             height="300px"
             title="AppFlix"
@@ -43,7 +43,7 @@ const Projects = () => {
             color={3}
           />
         </LinkTo>
-        <LinkTo to="honey-quiz-spa">
+        <LinkTo onClick="window.scrollTo(0, 0);" to="honey-quiz-spa">
           <Card
             height="300px"
             title="Honey Quiz SPA"
@@ -51,7 +51,7 @@ const Projects = () => {
             color={1}
           />
         </LinkTo>
-        <LinkTo to="art-portfolio">
+        <LinkTo onClick="window.scrollTo(0, 0);" to="art-portfolio">
           <Card
             height="300px"
             title="Art Portfolio"
@@ -59,7 +59,7 @@ const Projects = () => {
             color={1}
           />
         </LinkTo>
-        <LinkTo to="las-dehesas">
+        <LinkTo onClick="window.scrollTo(0, 0);" to="las-dehesas">
           <Card
             height="300px"
             title="Las Dehesas"
