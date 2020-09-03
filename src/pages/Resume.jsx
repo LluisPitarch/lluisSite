@@ -23,6 +23,9 @@ import {
   AdobeXd,
   Figma,
   Webpack,
+  JestIcon,
+  MySQL,
+  GIT,
 } from '../img/devIcons';
 
 const Cv = () => {
@@ -165,12 +168,24 @@ const Cv = () => {
             img: Mongo,
           },
           {
+            id: 20,
+            img: MySQL,
+          },
+          {
             id: 10,
             img: StyledComponents,
           },
           {
             id: 11,
             img: Webpack,
+          },
+          {
+            id: 11,
+            img: JestIcon,
+          },
+          {
+            id: 21,
+            img: GIT,
           },
           {
             id: 12,
