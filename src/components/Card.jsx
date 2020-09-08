@@ -97,6 +97,7 @@ const Card = ({
 
   const Subtitle = styled.span`
     display: block;
+    color: #f3f3f3;
     font-size: ${subFontSize ? subFontSize : '20px'};
   `;
 
