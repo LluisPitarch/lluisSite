@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { useResponsive } from '../hooks/useResponsive';
 
 import bg from '../img/bg.svg';
+import CookieBanner from './CookieBanner';
 
 const Layout = ({ children }) => {
   const { isBigScreen, isDesktop, isTablet } = useResponsive();
@@ -37,6 +38,7 @@ const Layout = ({ children }) => {
       <NavBar />
       <ContentContainer>{children}</ContentContainer>
       <Footer />
+      <CookieBanner />
     </Container>
   );
 };

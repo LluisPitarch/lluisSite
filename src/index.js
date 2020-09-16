@@ -4,6 +4,7 @@ import './globalStyles/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+
 import './fonts/FiraCode-Bold.ttf';
 import './fonts/FiraCode-Light.ttf';
 import './fonts/FiraCode-Regular.ttf';
