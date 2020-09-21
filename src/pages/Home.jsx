@@ -36,6 +36,7 @@ const Home = () => {
         srcIconOne="https://github.com/LluisPitarch"
         icon2={linkedin}
         srcIconTwo="https://www.linkedin.com/in/lluis-pitarch/"
+        typed={true}
       />
       <Title>About Me</Title>
       <P>

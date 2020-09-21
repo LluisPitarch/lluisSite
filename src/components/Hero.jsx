@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Typed from 'react-typed';
+import { useSpring, animated } from 'react-spring';
 
 import Card from './Card';
 
@@ -49,11 +51,26 @@ const Hero = (props) => {
     margin-right: 10px;
   `;
 
+  const fadeIn = useSpring({
+    opacity: 1,
+    position: 'relative',
+    top: '0px',
+    from: { opacity: 0, position: 'absolute', top: '-100px' },
+    config: { tension: 100 },
+  });
+
   return (
     <Section>
       <Article>
         <span>{`<h1>`}</span>
-        <Title>{props.title}</Title>
+        {props.typed ? (
+          <Typed strings={[props.title]} typeSpeed={60}>
+            <Title style={{ minHeight: '154px' }}></Title>
+          </Typed>
+        ) : (
+          <Title>{props.title}</Title>
+        )}
+
         <span>{`</h1>`}</span>
         <SubTitle>{props.subtitle}</SubTitle>
         <div>
@@ -66,7 +83,9 @@ const Hero = (props) => {
         </div>
       </Article>
       <Image>
-        <Card image={props.img} width="100%" height="50vh" noClick></Card>
+        <animated.div style={fadeIn}>
+          <Card image={props.img} width="100%" height="50vh" noClick></Card>
+        </animated.div>
       </Image>
     </Section>
   );

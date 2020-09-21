@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { keyframes } from 'styled-components';
 import { useResponsive } from '../hooks/useResponsive';
 
 const Card = ({
@@ -32,6 +33,22 @@ const Card = ({
       return '';
     }
   };
+
+  const heroAfterAnimation = keyframes`
+  from {
+    top: 30px;
+      right: 0px;
+      bottom: 0px;
+      left: 30px;
+  }
+
+  to {
+    top: 30px;
+      right: -15px;
+      bottom: -15px;
+      left: 30px;
+  }
+`;
 
   const BgColor = (color) => {
     let hexColor = 'E58F46';
@@ -76,8 +93,8 @@ const Card = ({
       content: '';
       position: absolute;
       top: 30px;
-      right: -10px;
-      bottom: -10px;
+      right: -15px;
+      bottom: -15px;
       left: 30px;
       margin: -1rem;
       overflow: hidden;
@@ -85,6 +102,9 @@ const Card = ({
       box-sizing: border-box;
       border-radius: 25px;
       transition: all 0.15s ease-in-out;
+      animation-name: ${heroAfterAnimation};
+      animation-duration: 1.3s;
+      animation-delay: 0.1s;
     }
 
     ${hover(noClick)}

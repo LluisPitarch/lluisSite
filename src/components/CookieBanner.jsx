@@ -2,7 +2,6 @@ import React from 'react';
 import CookieConsent from 'react-cookie-consent';
 
 const GDPRAcceptance = window.localStorage.getItem('GDPRAcceptance');
-console.log(GDPRAcceptance);
 
 const CookieBanner = () => {
   return (
