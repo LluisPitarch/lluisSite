@@ -41,7 +41,6 @@ const Card = ({
       bottom: 0px;
       left: 30px;
   }
-
   to {
     top: 30px;
       right: -15px;

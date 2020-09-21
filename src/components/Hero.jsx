@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Typed from 'react-typed';
-import { useSpring, animated } from 'react-spring';
+import { keyframes } from 'styled-components';
 
 import Card from './Card';
 
@@ -9,6 +9,15 @@ import { useResponsive } from '../hooks/useResponsive';
 
 const Hero = (props) => {
   const { isTabletOrPhone } = useResponsive();
+
+  const fadeIn = keyframes`
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+`;
 
   const Section = styled.section`
     display: flex;
@@ -25,6 +34,7 @@ const Hero = (props) => {
 
   const Image = styled.div`
     width: ${isTabletOrPhone ? '93%' : '46%'};
+    position: relative;
   `;
 
   const Title = styled.h1`
@@ -51,13 +61,11 @@ const Hero = (props) => {
     margin-right: 10px;
   `;
 
-  const fadeIn = useSpring({
-    opacity: 1,
-    position: 'relative',
-    top: '0px',
-    from: { opacity: 0, position: 'absolute', top: '-100px' },
-    config: { tension: 100 },
-  });
+  const AnimationCard = styled.div`
+    animation-name: ${fadeIn};
+    animation-duration: 1.3s;
+    width: 100%;
+  `;
 
   return (
     <Section>
@@ -83,9 +91,9 @@ const Hero = (props) => {
         </div>
       </Article>
       <Image>
-        <animated.div style={fadeIn}>
+        <AnimationCard>
           <Card image={props.img} width="100%" height="50vh" noClick></Card>
-        </animated.div>
+        </AnimationCard>
       </Image>
     </Section>
   );
