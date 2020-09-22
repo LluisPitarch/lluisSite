@@ -127,13 +127,14 @@ const Home = () => {
     <>
       <Hero
         title={`Hi, I'm Lluis Pitarch`}
-        subtitle="I’m a javascript developer who loves shape and bring ideas to live"
+        subtitle="Just a restless javascript developer who loves shape and bring ideas to live"
         img={image}
         icon1={github}
         srcIconOne="https://github.com/LluisPitarch"
         icon2={linkedin}
         srcIconTwo="https://www.linkedin.com/in/lluis-pitarch/"
         typed={true}
+        who={true}
       />
       <Title>About Me</Title>
       <P>

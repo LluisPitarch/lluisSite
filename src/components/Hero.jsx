@@ -71,7 +71,6 @@ const Hero = (props) => {
   return (
     <Section>
       <Article>
-        <span>{`<h1>`}</span>
         {props.typed ? (
           <Typed strings={[props.title]} typeSpeed={60}>
             <Title />
@@ -79,8 +78,8 @@ const Hero = (props) => {
         ) : (
           <Title>{props.title}</Title>
         )}
-
-        <span>{`</h1>`}</span>
+        <hr style={{ width: '14%', margin: 0 }} />
+        {props.who ? <p style={{ letterSpacing: '3px' }}>WHO I AM</p> : ''}
         <SubTitle>{props.subtitle}</SubTitle>
         <div>
           <a href={props.srcIconOne} rel="noopener noreferrer" target="_blank">
