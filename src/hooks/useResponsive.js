@@ -1,6 +1,10 @@
 import { useMediaQuery } from 'react-responsive';
 
 export const useResponsive = () => {
+  const isSuperBigScreen = useMediaQuery({
+    minWidth: 2270,
+  });
+
   const isBigScreen = useMediaQuery({
     minWidth: 1400,
   });
@@ -34,5 +38,6 @@ export const useResponsive = () => {
     isDesktop: isDesktop,
     isTabletOrPhone: isTabletOrPhone,
     isSmallDesktop: isSmallDesktop,
+    isSuperBigScreen: isSuperBigScreen,
   };
 };

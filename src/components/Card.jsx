@@ -112,6 +112,7 @@ const Card = ({
   const Title = styled.h3`
     font-size: ${fontSize ? fontSize : isTabletOrPhone ? '35px' : '40px'};
     color: #f3f3f3;
+    width: 100%;
   `;
 
   const Subtitle = styled.span`

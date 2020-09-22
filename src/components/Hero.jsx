@@ -8,7 +8,7 @@ import Card from './Card';
 import { useResponsive } from '../hooks/useResponsive';
 
 const Hero = (props) => {
-  const { isTabletOrPhone } = useResponsive();
+  const { isTabletOrPhone, isSuperBigScreen } = useResponsive();
 
   const fadeIn = keyframes`
   0% {
@@ -45,6 +45,7 @@ const Hero = (props) => {
     letter-spacing: 1px;
     color: #d9d9d9;
     margin: 0;
+    min-height: ${isSuperBigScreen ? '0px' : '154px'};
   `;
 
   const SubTitle = styled.h2`
@@ -73,7 +74,7 @@ const Hero = (props) => {
         <span>{`<h1>`}</span>
         {props.typed ? (
           <Typed strings={[props.title]} typeSpeed={60}>
-            <Title style={{ minHeight: '154px' }}></Title>
+            <Title />
           </Typed>
         ) : (
           <Title>{props.title}</Title>

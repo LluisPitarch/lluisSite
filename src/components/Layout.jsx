@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
     ? '12%'
     : isTablet
     ? '10%'
-    : '4%';
+    : '9%';
 
   const Container = styled.div`
     /* background-repeat: repeat;
