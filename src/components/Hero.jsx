@@ -72,7 +72,7 @@ const Hero = (props) => {
     <Section>
       <Article>
         {props.typed ? (
-          <Typed strings={[props.title]} typeSpeed={60}>
+          <Typed strings={[props.title]} typeSpeed={60} showCursor={false}>
             <Title />
           </Typed>
         ) : (

@@ -122,7 +122,7 @@ const Cv = () => {
           },
           {
             id: 4,
-            title: 'Freelance Developer',
+            title: 'Javascript Developer',
             company: 'Comboi',
             year: '2019',
           },
