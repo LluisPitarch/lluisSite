@@ -26,6 +26,7 @@ import {
   JestIcon,
   MySQL,
   GIT,
+  Gatsby,
 } from '../img/devIcons';
 
 const Cv = () => {
@@ -134,70 +135,92 @@ const Cv = () => {
           {
             id: 1,
             img: HTML5,
+            url: 'https://developer.mozilla.org/es/docs/HTML/HTML5',
           },
           {
             id: 2,
             img: CSS,
+            url: 'https://developer.mozilla.org/es/docs/Glossary/CSS',
           },
           {
             id: 3,
             img: Javascript,
+            url: 'https://developer.mozilla.org/es/docs/Web/JavaScript',
           },
           {
             id: 4,
             img: ReactIcon,
+            url: 'https://reactjs.org/',
           },
           {
             id: 5,
             img: Redux,
+            url: 'https://redux.js.org/',
           },
           {
             id: 6,
             img: NodeJs,
+            url: 'https://nodejs.org/es/',
           },
           {
             id: 7,
             img: Express,
+            url: 'https://expressjs.com/',
           },
           {
             id: 8,
             img: Firebase,
+            url: 'https://firebase.google.com/',
           },
           {
             id: 9,
             img: Mongo,
+            url: 'https://www.mongodb.com/',
           },
           {
             id: 20,
             img: MySQL,
+            url: 'https://www.mysql.com/',
           },
           {
             id: 10,
             img: StyledComponents,
+            url: 'https://styled-components.com/',
           },
           {
             id: 11,
+            img: Gatsby,
+            url: 'https://www.gatsbyjs.com/',
+          },
+          {
+            id: 12,
             img: Webpack,
+            url: 'https://webpack.js.org/',
           },
           {
-            id: 11,
+            id: 13,
             img: JestIcon,
+            url: 'https://jestjs.io/',
           },
           {
             id: 21,
             img: GIT,
+            url: 'https://git-scm.com/',
           },
           {
             id: 12,
             img: AdobeIllustrator,
-          },
-          {
-            id: 13,
-            img: AdobeXd,
+            url: 'https://www.adobe.com/products/illustrator.html',
           },
           {
             id: 14,
+            img: AdobeXd,
+            https: '//www.adobe.com/products/xd.html',
+          },
+          {
+            id: 15,
             img: Figma,
+            url: 'https://www.figma.com/',
           },
         ]}
       </Stack>

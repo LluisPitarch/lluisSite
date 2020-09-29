@@ -37,7 +37,13 @@ const Stack = ({ children, cols }) => {
       <Title>Stack</Title>
       <StackIconContainer>
         {children.map((item) => {
-          return <IconContainer key={item.id}>{item.img}</IconContainer>;
+          return (
+            <IconContainer key={item.id}>
+              <a href={item.url} rel="noopener noreferrer" target="_blank">
+                {item.img}
+              </a>
+            </IconContainer>
+          );
         })}
       </StackIconContainer>
     </StackContainer>
