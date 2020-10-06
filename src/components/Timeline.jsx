@@ -8,7 +8,7 @@ import HorizontalLine from '../img/timeline-horizontal.svg';
 import VerticalLine from '../img/timeline-vertical.svg';
 
 const Timeline = ({ children }) => {
-  const { isTabletOrPhone, isSmallDesktop } = useResponsive();
+  const { isTabletOrPhone, isSmallDesktop, isSuperBigScreen } = useResponsive();
 
   const TimelineContainer = styled.section`
     margin: 100px 0;
@@ -21,7 +21,7 @@ const Timeline = ({ children }) => {
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
-    height: ${isTabletOrPhone ? '650px' : '270px'};
+    height: ${isTabletOrPhone ? '650px' : isSuperBigScreen ? '370px' : '270px'};
     margin-top: 30px;
     background-size: contain;
     background-position: center;
